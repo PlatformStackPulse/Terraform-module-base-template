@@ -17,7 +17,7 @@ main (protected)
 Apply branch protection with:
 
 ```bash
-./scripts/apply-branch-protection.sh your-org/your-repo
+./scripts/apply-branch-protection.sh PlatformStackPulse/Terraform-module-base-template
 ```
 
 ### Rules Applied
@@ -109,16 +109,16 @@ git push origin v1.0.1
 ```hcl
 # Pin to specific version (recommended)
 module "example" {
-  source = "github.com/your-org/your-module//modules/example?ref=v1.0.0"
+  source = "github.com/PlatformStackPulse/terraform-aws-my-module?ref=v1.0.0"
 }
 
 # Pin to major version
 module "example" {
-  source = "github.com/your-org/your-module//modules/example?ref=v1"
+  source = "github.com/PlatformStackPulse/terraform-aws-my-module?ref=v1"
 }
 
 # Latest (not recommended for production)
 module "example" {
-  source = "github.com/your-org/your-module//modules/example"
+  source = "github.com/PlatformStackPulse/terraform-aws-my-module"
 }
 ```

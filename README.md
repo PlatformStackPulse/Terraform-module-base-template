@@ -1,7 +1,7 @@
 # Terraform Module Template
 
-[![CI](https://github.com/your-org/Terraform-module-base-template/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/Terraform-module-base-template/actions/workflows/ci.yml)
-[![Release](https://github.com/your-org/Terraform-module-base-template/actions/workflows/release.yml/badge.svg)](https://github.com/your-org/Terraform-module-base-template/actions/workflows/release.yml)
+[![CI](https://github.com/PlatformStackPulse/Terraform-module-base-template/actions/workflows/ci.yml/badge.svg)](https://github.com/PlatformStackPulse/Terraform-module-base-template/actions/workflows/ci.yml)
+[![Release](https://github.com/PlatformStackPulse/Terraform-module-base-template/actions/workflows/release.yml/badge.svg)](https://github.com/PlatformStackPulse/Terraform-module-base-template/actions/workflows/release.yml)
 
 A production-ready template for creating Terraform modules following the **one module per repository** best practice, with built-in CI/CD, security scanning, testing, documentation generation, and publishing to public registries.
 
@@ -56,7 +56,7 @@ See [TEMPLATE_GUIDE.md](TEMPLATE_GUIDE.md) for detailed instructions.
 
 ```hcl
 module "this" {
-  source = "github.com/your-org/terraform-aws-my-module?ref=v1.0.0"
+  source = "github.com/PlatformStackPulse/terraform-aws-my-module?ref=v1.0.0"
 
   name        = "my-resource"
   environment = "dev"
@@ -73,7 +73,7 @@ module "this" {
 
 ```hcl
 module "this" {
-  source  = "your-org/my-module/aws"
+  source  = "PlatformStackPulse/my-module/aws"
   version = "~> 1.0"
 
   name        = "my-resource"
