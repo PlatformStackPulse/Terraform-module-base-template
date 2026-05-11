@@ -25,10 +25,10 @@ A production-ready template for creating Terraform modules following the **one m
 
 ```bash
 # Create repo from template (name MUST follow: terraform-<PROVIDER>-<NAME>)
-gh repo create my-org/terraform-aws-my-module --template my-org/Terraform-module-base-template --public
+gh repo create PlatformStackPulse/terraform-aws-my-module --template PlatformStackPulse/Terraform-module-base-template --public
 
 # Clone
-git clone git@github.com:my-org/terraform-aws-my-module.git
+git clone git@github.com:PlatformStackPulse/terraform-aws-my-module.git
 cd terraform-aws-my-module
 
 # Install tools and hooks
