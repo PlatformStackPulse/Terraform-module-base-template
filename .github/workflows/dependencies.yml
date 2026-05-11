@@ -29,29 +29,17 @@ jobs:
         id: updates
         run: |
           UPDATES_FOUND=false
-          for dir in modules/*/; do
-            if [[ -f "${dir}versions.tf" ]]; then
-              cd "$dir"
-              terraform init -backend=false -upgrade
-              if [[ -n "$(git diff --name-only .terraform.lock.hcl 2>/dev/null)" ]]; then
-                UPDATES_FOUND=true
-              fi
-              cd "$GITHUB_WORKSPACE"
-            fi
-          done
+          terraform init -backend=false -upgrade
+          if [[ -n "$(git diff --name-only .terraform.lock.hcl 2>/dev/null)" ]]; then
+            UPDATES_FOUND=true
+          fi
           echo "found=$UPDATES_FOUND" >> "$GITHUB_OUTPUT"
 
       - name: Validate after update
         if: steps.updates.outputs.found == 'true'
         run: |
-          for dir in modules/*/; do
-            if [[ -f "${dir}versions.tf" ]]; then
-              cd "$dir"
-              terraform init -backend=false
-              terraform validate
-              cd "$GITHUB_WORKSPACE"
-            fi
-          done
+          terraform init -backend=false
+          terraform validate
 
       - name: Create PR for updates
         if: steps.updates.outputs.found == 'true'

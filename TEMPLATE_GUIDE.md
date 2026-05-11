@@ -10,10 +10,10 @@ Repository **must** follow the naming convention `terraform-<PROVIDER>-<NAME>`:
 
 ```bash
 # Create from template
-gh repo create my-org/terraform-aws-vpc --template my-org/Terraform-module-base-template --public
+gh repo create PlatformStackPulse/terraform-aws-vpc --template PlatformStackPulse/Terraform-module-base-template --public
 
 # Clone locally
-git clone git@github.com:my-org/terraform-aws-vpc.git
+git clone git@github.com:PlatformStackPulse/terraform-aws-vpc.git
 cd terraform-aws-vpc
 ```
 

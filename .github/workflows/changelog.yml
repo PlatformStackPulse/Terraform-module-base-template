@@ -24,7 +24,12 @@ jobs:
           sudo mv git-chglog /usr/local/bin/
 
       - name: Generate Changelog
-        run: git-chglog -o CHANGELOG.md
+        run: |
+          if git describe --tags --abbrev=0 >/dev/null 2>&1; then
+            git-chglog -o CHANGELOG.md
+          else
+            echo "No tags found — skipping changelog generation."
+          fi
 
       - name: Commit Changelog
         run: |

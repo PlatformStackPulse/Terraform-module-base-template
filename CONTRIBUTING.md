@@ -6,7 +6,7 @@ Thank you for contributing to this Terraform module!
 
 ```bash
 # Clone the repository
-git clone git@github.com:your-org/Terraform-module-base-template.git
+git clone git@github.com:PlatformStackPulse/Terraform-module-base-template.git
 cd Terraform-module-base-template
 
 # Install tools

@@ -6,7 +6,7 @@ If you discover a security vulnerability in this module, please report it respon
 
 **Do NOT open a public issue.**
 
-Instead, email: **security@your-org.com**
+Instead, email: **security@PlatformStackPulse.com**
 
 Include:
 - Description of the vulnerability
